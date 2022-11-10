@@ -35,3 +35,15 @@ ORDER BY TrainingTimesLastYear desc
 SELECT Age, YearsAtCompany, TotalWorkingYears, PercentSalaryHike, MonthlyIncome
 FROM `HR_Employee_Attrition.HR_Employee_Data`
 ORDER BY Age desc
+
+-- Breakdown of DistanceFromHome by JobRole and Attrition
+
+SELECT JobRole, DistanceFromHome, Attrition
+FROM `HR_Employee_Attrition.HR_Employee_Data`
+ORDER BY DistanceFromHome asc
+
+-- Average MonthlyIncome by Education
+
+SELECT Education, AVG(MonthlyIncome) as AverageMonthlyIncome
+FROM `HR_Employee_Attrition.HR_Employee_Data`
+GROUP BY Education
